@@ -1,0 +1,101 @@
+{
+  "name": "marine-foods",
+  "version": "1.0.0",
+  "author": "Aligare",
+  "description": "BDO Marine Foods V1.0",
+  "private": true,
+  "main": "src/electron-starter.js",
+  
+  "repository": "https://github.com/joseR-Aligare/bdo_app_web",
+  "publish": {
+    "provider": "github",
+    "releaseType": "release"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.10.5",
+    "@testing-library/jest-dom": "4.2.4",
+    "@testing-library/react": "9.3.2",
+    "@testing-library/user-event": "7.1.2",
+    "electron-log": "3.0.5",
+    "electron-updater": "4.0.6",
+    "express": "4.17.1",
+    "ngx-electron": "2.2.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-router-dom": "5.1.2",
+    "react-scripts": "3.4.1",
+    "react-tooltip": "^5.14.0",
+    "typescript": "3.9.7"
+  },
+  "devDependencies": {
+    "@angular/core": "11.0.3",
+    "concurrently": "5.2.0",
+    "cross-env": "7.0.2",
+    "electron": "^25.1.1",
+    "electron-builder": "20.28.4",
+    "electron-rebuild": "2.3.4",
+    "fibers": "5.0.0",
+    "node-sass": "5.0.0",
+    "sass": "1.29.0",
+    "wait-on": "5.0.1",
+    "zone.js": "0.11.3"
+  },
+  "optionalDependencies": {
+    "windows-build-tools": "5.2.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "dist": "yarn build && electron-builder build --win",
+    "electron": "electron .",
+    "dev": "concurrently \"cross-env NODE_ENV=development node ./internals/scripts/wait-for-react.js && cross-env NODE_ENV=development yarn electron\" \"cross-env NODE_ENV=development yarn start\"",
+    "electron-rebuild": "electron-rebuild"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "build": {
+    "appId": "com.bdo.app.web.autoupdater",
+    "directories": {
+      "buildResources": "electron-build"
+    },
+    "files": [
+      "./electron-build/**/*",
+      "./src/**/*",
+      "./icon.*"
+    ],
+    "extends": null,
+    "appImage": {},
+    "win": {
+      "target": "nsis",
+      "requestedExecutionLevel": "asInvoker",
+      "verifyUpdateCodeSignature": false
+    },
+    "nsis": {
+      "perMachine": true,
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "warningsAsErrors": true,
+      "runAfterFinish": false,
+      "allowElevation": true
+    },
+    "extraFiles": [
+      {
+        "from": "./build/",
+        "to": "resources/assets/"
+      }
+    ]
+  }
+}

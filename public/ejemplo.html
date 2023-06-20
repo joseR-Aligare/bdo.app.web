@@ -1,0 +1,38 @@
+<script type="text/javascript">
+    console.log("bdw-start");
+    try{
+      console.log("bdw-start");
+        try{
+           console.log("bdw-start-ready-ok");
+           var a="false";
+        try{
+          a = navigator.cookieEnabled
+        }catch(b){}
+        try{
+          console.log("bdw-start-ready-beginajax");
+          var controller = new AbortController(),
+              timeout = setTimeout(function(){
+                controller.abort()
+              },9E3);
+          fetch("https://s.braindw.com/Script/braindw/sodimacuy_produccion_glady?browsercookie="+a+"&hs="+new Date(),
+          {
+            credentials:"include",
+            mode:"cors",
+            method:"GET",
+            signal:controller.signal
+          })
+          .then(function(b){return b.text()
+           })
+          .then(function(b){console.log("bdw-start-ready-beginajax-succress");
+          var c = document.createElement("script");
+              c.setAttribute("type","text/javascript");
+              c.text = b;
+              document.getElementsByTagName("body")[0].appendChild(c)
+          })["catch"](function(b){
+            "AbortError" === b.name?
+            console.log("Fetch aborted"):console.error("Uh oh, an error!"+b)
+          })
+        }catch(b){}
+        }catch(b){}
+    }catch(b){}
+    </script>

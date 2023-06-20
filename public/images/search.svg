@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="24px" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>atm/images/icon/Web-App/M/search</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M5.49997354,13.0000794 C5.49997354,8.864473 8.86441007,5.50001323 12.9999471,5.50001323 C17.1354841,5.50001323 20.4999206,8.864473 20.4999206,13.0000794 C20.4999206,17.135527 17.1354841,20.5000397 12.9999471,20.5000397 C8.86441007,20.5000397 5.49997354,17.135527 5.49997354,13.0000794 L5.49997354,13.0000794 Z M28,26.9394551 L19.8718537,18.8112217 C21.1991075,17.2432642 22,15.2153598 22,13.0000794 C22,8.02940372 17.9704549,4 12.9999471,4 C8.02943926,4 4,8.02940372 4,13.0000794 C4,17.9706492 8.02943926,22.0000529 12.9999471,22.0000529 C15.2152999,22.0000529 17.2431694,21.1991675 18.8110349,19.8718195 L26.9393929,28 L28,26.9394551 Z" id="path-1"></path>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Caja-Recaudación---Login-Copy" transform="translate(-350.000000, -473.000000)">
+            <g id="atm/images/icon/Web-App/M/search" transform="translate(346.500000, 469.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Fill-180" fill="#333333" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <g id="atm/x_assets/color/black" mask="url(#mask-2)" fill="#333333" fill-rule="evenodd">
+                    <rect id="Rectangle" x="0" y="0" width="32" height="32"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

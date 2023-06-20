@@ -1,0 +1,53 @@
+Caja Digitadora
+http://ec2-44-231-83-193.us-west-2.compute.amazonaws.com/rec20-001_recauda/cl.aligare.reca.react/rec20-001_caja-digitadora.git
+- yarn start
+  abrir en chrome localhost:3000. .env configura si abrir automaticamente chrome
+
+- yarn dev
+  inicia automaticamente electron apuntando a localhost:3000
+
+- yarn build --configure=development
+  Genera /build con app usando localhost
+
+- yarn build --configure=prod
+  Genera /build con app usando url definido en electron-starter.js
+
+- yarn dist
+  Genera instalador de la caja para windows. Referencia al build y electron-starter.js
+  el instalador queda en /dist
+
+- set ELECTRON_BUILDER_ALLOW_UNRESOLVED_DEPENDENCIES=true
+  Si aparece un error al ejecutar yarn dist, indicando que hay modulos no encontrados
+
+- NODE_ENV no existe
+npm install -g win-node-env
+
+- yarn add react-tooltip
+  Instalación del componente tooltip para los mensajes en anulaciones
+
+- error node_module_version 80 vs anterior (en el mismo orden abajo)
+  npm i -D electron-rebuild
+  eliminar directorio node-modules y packages-lock.json/yarn.lock.
+  npm install
+  .\node_modules\.bin\electron-rebuild.cmd
+
+- template.json
+es el template aws SES para el envio de mail comprobante
+https://my.stripo.email/cabinet/#/template-editor/?projectId=272066&templateId=472713&type=MY_TEMPLATE pagina donde armamos el template html
+https://www.freeformatter.com/json-escape.html#ad-output esta pagina convierte el html de template en formato apto para parametro json
+
+Ejecutar como administrador
+npm install --global windows-build-tools@4.0.0
+
+
+Configurar version microsoft visual c++
+npm config set msvs_version 2017
+
+
+---
+Al instalar por primera vez :
+https://www.itechtics.com/microsoft-visual-c-redistributable-versions-direct-download-links/#microsoft-visual-c-2017-redistributable
+
+- Python 3.9.7
+- Visual studio 2017 -> visual studio instaler: modificar "agregrar modulo de node"
+- npm install
